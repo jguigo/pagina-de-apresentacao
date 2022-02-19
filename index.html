@@ -39,11 +39,11 @@
                <h5>Full Stack Developer</h5>
             </div>
 
-            <div id="arrow">
-               <i class="fa-solid fa-caret-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+               <i id="animate" class="fa-solid fa-caret-down"></i>
             </div>
 
-            <div id="about">
+            <div id="about" style="display: none">
                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Beatae reprehenderit explicabo quisquam magni in commodi
@@ -63,5 +63,14 @@
             </div>
          </section>
       </main>
+
+      <script>
+         function displayAbout() {
+            const arrow = document.getElementById("animation");
+            arrow.classList.toggle("rotate");
+            const display = document.getElementById("about");
+            display.classList.toggle("active");
+         }
+      </script>
    </body>
 </html>
